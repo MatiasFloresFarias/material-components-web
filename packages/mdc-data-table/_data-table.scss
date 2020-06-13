@@ -203,6 +203,14 @@
     }
   }
 
+  .mdc-data-table__cell--checkbox {
+    @include feature-targeting-mixins.targets($feat-structure) {
+      // Set to lowest width to adapt to cell content. Useful for table cell is
+      // dense. Cell width should adapt to row checkbox size when it is dense.
+      width: 1px;
+    }
+  }
+
   .mdc-data-table__header-cell--numeric {
     @include feature-targeting-mixins.targets($feat-structure) {
       text-align: right;
